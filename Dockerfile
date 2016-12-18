@@ -4,7 +4,7 @@ MAINTAINER Lars Kellogg-Stedman <lars@oddbit.com>
 ENV SQUEEZE_VOL /srv/squeezebox
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-ENV MEDIASERVER_URL=http://downloads.slimdevices.com/nightly/7.9/sc/b7dfc80/logitechmediaserver_7.9.0~1459712283_amd64.deb
+ENV MEDIASERVER_URL=http://downloads.slimdevices.com/nightly/7.9/sc/df79fe4/logitechmediaserver_7.9.0~1481874538_amd64.deb
 
 RUN apt-get update && \
 	apt-get -y --force-yes install curl wget faad flac lame sox && \
@@ -20,4 +20,3 @@ COPY entrypoint.sh /entrypoint.sh
 COPY start-squeezebox.sh /start-squeezebox.sh
 RUN chmod 755 /entrypoint.sh /start-squeezebox.sh
 ENTRYPOINT ["/entrypoint.sh"]
-
